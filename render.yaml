@@ -1,0 +1,5 @@
+services:
+  - name: EMS-Frontend
+    type: web
+    env: node
+    port: 3000
