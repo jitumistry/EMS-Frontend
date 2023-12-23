@@ -1,5 +1,6 @@
 services:
-  - name: EMS-Frontend
-    type: web
-    env: node
-    port: 3000
+  - name: frontend
+    env:
+      - key: API_KEY
+        value: https://ems-backend-txx3.onrender.com
+
