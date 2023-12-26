@@ -18,7 +18,7 @@ const EmpLogin = ({ onLogin }) => {
       alert('Please input your Username & Password')
     }
     else {
-      axios.post('https://ems-backend-txx3.onrender.com/auth/login', { name, password })
+      axios.post(`${process.env.MY_KEY}/auth/login`, { name, password })
         .then(res => {
           if (res.data === 'success') {
             navigate('/employeedashbord')

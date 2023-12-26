@@ -9,7 +9,7 @@ const EmpLeave = () => {
   const [counter, setCounter] = useState(0)
   const [status, setStatus] = useState('pending')
   useEffect(() => {
-    axios.get('https://ems-backend-txx3.onrender.com/applyleave')
+    axios.get(`${process.env.MY_KEY}/applyleave`)
       .then(res => {
         setData(res.data)
       })
@@ -18,7 +18,7 @@ const EmpLeave = () => {
       })
   }, [])
   const changeHandler = (id) => {
-    axios.post(`https://ems-backend-txx3.onrender.com/applyleave/updatestatus/${id}`)
+    axios.post(`${process.env.MY_KEY}/applyleave/updatestatus/${id}`)
       .then(res => {
         alert('Approved Successfully')
         setStatus('Approved')

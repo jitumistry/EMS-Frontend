@@ -13,7 +13,7 @@ const Registration = () => {
   const navigate = useNavigate()
   const submitHandler = (e) => {
     e.preventDefault();
-    axios.post('https://ems-backend-txx3.onrender.com/auth', { uname, psw, email })
+    axios.post(`${process.env.MY_KEY}/auth`, { uname, psw, email })
       .then(res => {
         alert('Registered successfully')
         navigate('/login')

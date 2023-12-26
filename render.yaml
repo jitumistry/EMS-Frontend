@@ -1,6 +1,0 @@
-services:
-  - name: frontend
-    env:
-      - key: API_KEY
-        value: https://ems-backend-txx3.onrender.com
-

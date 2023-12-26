@@ -20,7 +20,7 @@ const ApplyLeave = () => {
       alert('Please Enter Input');
     }
     else {
-      axios.post('https://ems-backend-txx3.onrender.com/applyleave', { code, name, designation, dates, description, status })
+      axios.post(`${process.env.MY_KEY}/applyleave`, { code, name, designation, dates, description, status })
         .then(res => {
           alert('Application Send')
           setCode('')

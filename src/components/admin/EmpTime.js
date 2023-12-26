@@ -12,7 +12,7 @@ const EmpTime = () => {
   const navigate = useNavigate()
   const submitHandler = (e) => {
     e.preventDefault();
-    axios.post(`https://ems-backend-txx3.onrender.com/timesheet/check`, { code, name, role })
+    axios.post(`${process.env.MY_KEY}/timesheet/check`, { code, name, role })
       .then(res => {
         let key = res.data[0].code
         navigate(`../data/${key}`)

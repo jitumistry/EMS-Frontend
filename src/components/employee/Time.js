@@ -26,7 +26,7 @@ const Time = () => {
       alert('fill the data')
     }
     else {
-      axios.post('https://ems-backend-txx3.onrender.com/timesheet', { code, level, elevel, dcode, rcode, name, dpt, dat, pcode, prcode, role, manager, hours, acode, pdes })
+      axios.post(`${process.env.MY_KEY}/timesheet`, { code, level, elevel, dcode, rcode, name, dpt, dat, pcode, prcode, role, manager, hours, acode, pdes })
         .then(res => {
           alert('Data Addad')
           setCode('');
