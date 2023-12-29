@@ -9,7 +9,7 @@ const EmpSheet = () => {
     const [data, setData] = useState([])
     const [count, setCount] = useState(0)
     useEffect(() => {
-        axios.get(`${process.env.MY_KEY}/timesheet/data/${key}`)
+        axios.get(`${process.env.REACT_APP_MY_KEY}/timesheet/data/${key}`)
             .then(res => {
                 setData(res.data)
             })

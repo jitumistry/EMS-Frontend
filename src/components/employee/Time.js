@@ -26,7 +26,7 @@ const Time = () => {
       alert('fill the data')
     }
     else {
-      axios.post(`${process.env.MY_KEY}/timesheet`, { code, level, elevel, dcode, rcode, name, dpt, dat, pcode, prcode, role, manager, hours, acode, pdes })
+      axios.post(`${process.env.REACT_APP_MY_KEY}/timesheet`, { code, level, elevel, dcode, rcode, name, dpt, dat, pcode, prcode, role, manager, hours, acode, pdes })
         .then(res => {
           alert('Data Addad')
           setCode('');
@@ -69,11 +69,11 @@ const Time = () => {
                     <div className='mb-2'>
                       <p>Emp.Level</p>
                       <select className="form-select mb-2" aria-label="Default select example" value={level} onChange={(e) => { setLevel(e.target.value) }}>
-                        <option selected>select</option>
-                        <option >Jr.</option>
-                        <option >Mid</option>
-                        <option >Senior</option>
-                        <option >Lead</option>
+                        <option value="select">select</option>
+                        <option value="Jr.">Jr.</option>
+                        <option value="Mid">Mid</option>
+                        <option value="Senior">Senior</option>
+                        <option value="Lead">Lead</option>
                       </select>
                     </div>
                     <div className='mb-2'>

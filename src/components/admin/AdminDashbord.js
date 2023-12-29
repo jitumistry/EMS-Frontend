@@ -17,9 +17,7 @@ const AdminDashbord = ({ isLoggedIn }) => {
     const {
         token: { colorBgContainer },
     } = theme.useToken();
-    useEffect(() => {
-        console.log('WrappedComponent Rendering, isLoggedIn:', isLoggedIn);
-    }, [isLoggedIn]);
+    
     return (
         <Layout className='full-screen'>
             <Sider trigger={null} collapsible collapsed={collapsed}>

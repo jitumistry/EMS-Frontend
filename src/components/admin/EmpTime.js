@@ -12,7 +12,7 @@ const EmpTime = () => {
   const navigate = useNavigate()
   const submitHandler = (e) => {
     e.preventDefault();
-    axios.post(`${process.env.MY_KEY}/timesheet/check`, { code, name, role })
+    axios.post(`${process.env.REACT_APP_MY_KEY}/timesheet/check`, { code, name, role })
       .then(res => {
         let key = res.data[0].code
         navigate(`../data/${key}`)

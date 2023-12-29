@@ -11,7 +11,7 @@ const AdminLogin = ({ onLogin }) => {
     const [adminpsw, setAdminpsw] = useState('')
     const navigate = useNavigate()
     const submitHandler = () => {
-        axios.post(`${process.env.MY_KEY}/admin/auth`, { admin, adminpsw })
+        axios.post(`${process.env.REACT_APP_MY_KEY}/admin/auth`, { admin, adminpsw })
             .then(res => {
                 if (res.data === 'success') {
                     navigate('/admindashbord')

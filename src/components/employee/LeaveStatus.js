@@ -7,7 +7,7 @@ const LeaveStatus = () => {
   const [data, setData] = useState([])
   const [counter, setCounter] = useState(0)
   useEffect(() => {
-    axios.get(`${process.env.MY_KEY}/applyleave`)
+    axios.get(`${process.env.REACT_APP_MY_KEY}/applyleave`)
       .then(res => {
         setData(res.data)
       })

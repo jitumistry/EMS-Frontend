@@ -20,7 +20,7 @@ const ApplyLeave = () => {
       alert('Please Enter Input');
     }
     else {
-      axios.post(`${process.env.MY_KEY}/applyleave`, { code, name, designation, dates, description, status })
+      axios.post(`${process.env.REACT_APP_MY_KEY}/applyleave`, { code, name, designation, dates, description, status })
         .then(res => {
           alert('Application Send')
           setCode('')

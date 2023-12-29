@@ -8,7 +8,7 @@ const Home = () => {
         <div className={styles.screen}>
             <img src={cover} alt='working' />
             <div className={styles.absolut}>
-                <NavLink to={'/login'}><h1>Click Here To Login</h1></NavLink>
+                <NavLink to={'/employeedashbord'}><h1>Click Here To Login</h1></NavLink>
             </div>
         </div>
     )

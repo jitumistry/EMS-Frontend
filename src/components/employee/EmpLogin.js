@@ -18,7 +18,7 @@ const EmpLogin = ({ onLogin }) => {
       alert('Please input your Username & Password')
     }
     else {
-      axios.post(`${process.env.MY_KEY}/auth/login`, { name, password })
+      axios.post(`${process.env.REACT_APP_MY_KEY}/auth/login`, { name, password })
         .then(res => {
           if (res.data === 'success') {
             navigate('/employeedashbord')

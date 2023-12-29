@@ -16,9 +16,7 @@ const AdminHoc = (WrappedComponent) => {
       }, 1000);
     }, []);
 
-    useEffect(() => {
-      console.log('AdminHoc Rendering, isLoggedIn:', isLoggedIn);
-    }, [isLoggedIn]);
+    
 
     return (
       <div>

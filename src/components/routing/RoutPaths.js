@@ -26,14 +26,14 @@ const RoutPaths = () => {
         <Route path='/' element={<Home />} />
         <Route path='/login' element={<EmpLogin />} />
         <Route path='/registration' element={<Registration />} />
-        <Route path='/employeedashbord' Component={EmpWrappedComponent}>
+        <Route path='/employeedashbord' element={<EmpWrappedComponent />}>
           <Route path='' element={<Dashbord />} />
           <Route path='timesheet' element={<Time />} />
           <Route path='applyleave' element={<ApplyLeave />} />
           <Route path='leavestatus' element={<LeaveStatus />} />
         </Route>
         <Route path='/admin' element={<AdminLogin />} />
-        <Route path='/admindashbord' Component={AdminWrappedComponent}>
+        <Route path='/admindashbord' element={<AdminWrappedComponent /> }>
           <Route path='' element={<Dash />} />
           <Route path='emptimesheet' element={<EmpTime />} />
           <Route path='empleave' element={<EmpLeave />} />

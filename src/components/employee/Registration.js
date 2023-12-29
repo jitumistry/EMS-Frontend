@@ -13,7 +13,7 @@ const Registration = () => {
   const navigate = useNavigate()
   const submitHandler = (e) => {
     e.preventDefault();
-    axios.post(`${process.env.MY_KEY}/auth`, { uname, psw, email })
+    axios.post(`${process.env.REACT_APP_MY_KEY}/auth`, { uname, psw, email })
       .then(res => {
         alert('Registered successfully')
         navigate('/login')
