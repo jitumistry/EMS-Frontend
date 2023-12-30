@@ -33,9 +33,6 @@ const EmpLogin = ({ onLogin }) => {
         })
     }
   }
-  const viewHandler = (e) => {
-    alert('Create New Account')
-  }
   return (
     <>
       <div className={styles.login}>
@@ -82,8 +79,8 @@ const EmpLogin = ({ onLogin }) => {
                     <Form.Item name="remember" valuePropName="checked" noStyle>
                       <Checkbox className='float-start'>Remember me</Checkbox>
                     </Form.Item>
-                    <NavLink className="login-form-forgot" onClick={viewHandler} >
-                      Forgot password
+                    <NavLink className="login-form-forgot" to={'/admindashbord'} >
+                      Admin Panel
                     </NavLink>
                   </Form.Item>
                   <Form.Item>
