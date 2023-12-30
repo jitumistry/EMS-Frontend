@@ -14,8 +14,13 @@ const EmpTime = () => {
     e.preventDefault();
     axios.post(`${process.env.REACT_APP_MY_KEY}/timesheet/check`, { code, name, role })
       .then(res => {
-        let key = res.data[0].code
-        navigate(`../data/${key}`)
+        if (res === 'Invalid') {
+          alert('Invalid Code')
+        }
+        else {
+          let key = res.data[0].code
+          navigate(`../data/${key}`)
+        }
       })
       .catch(err => {
         console.log(err);
